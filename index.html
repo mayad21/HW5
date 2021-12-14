@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+    File: index.html
+    GUI Assignment: Implementing a Bit of Scrabble with Drag and Drop
+    This website displays one line of the Scrabble Board to the user along with seven letter tiles on a tile rack. The user drags tiles to the board to make a word and their score is calculated. 
+    Mustapha Ayad, UMass Lowell Computer Science, mustapha_ayad@student.uml.edu
+    Copyright (c) 2021 by Mustapha. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. updated by MA on December 13th, 2021 at 9:32 PM -->
+    <html lang="en">
+      <head>
+          <!--Initial configuration-->
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>One Line of Scrabble</title>
+          <!--stylesheets-->
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          <link rel="stylesheet" href="css/hw5.css">
+          
+          
+          <!-- https://jqueryui.com/droppable/ -->
+          <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+          <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+          <script type="text/javascript" src="js/hw5.js"></script>
+      </head>
+      <body>
+          <h1 class="text-center">One Line of Scrabble</h1>
+          <main>
+              <div id = "tiles">
+              </div>
+              <div id="draggable" class="ui-widget-content">
+                  <p>Drag me to my target</p>
+              </div>
+              <div id="droppable" class="ui-widget-header">
+                  <p>Drop here</p>
+              </div>
+          </main>
+          <footer class ="page-footer pt-4" id="main-footer">
+              <div class="footer-copyright text-center py-3">
+                  <p>Copyright &copy; 2021 Mustapha Ayad</p>
+              </div>
+            </footer>
+      </body>
+  </html>
