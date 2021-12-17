@@ -1,0 +1,58 @@
+/* File: hw5.css GUI Assignment: Implementing a Bit of Scrabble with Drag and Drop This website displays one line of the Scrabble Board to the user along with seven letter tiles on a tile rack. The user drags tiles to the board to make a word and their score is calculated. Mustapha Ayad, UMass Lowell Computer Science, mustapha_ayad@student.uml.edu Copyright (c) 2021 by Mustapha. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. updated by MA on December 16th, 2021 at 7:32 PM --> */
+html {
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    margin: 0;
+    background-color: rgb(247, 218, 180);
+}
+/* formatting so that content doesn't take up width of browser*/
+#contentWrap {
+    max-width: 900px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    background-color: white;
+    margin-bottom: 100px;
+    padding-top:20px;
+}
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    width: 680px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*button formatting*/
+#controls {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+#divScore, #divTotalScore {
+    text-align: center;
+}
+#rack {
+    background-image: url("../graphics_data/scrabble-tile-holder-406774_640.png");
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 200px;
+    padding: 20px;
+    margin-top: 25px;
+}
+.tile{
+    max-width: 100%;
+    height: 100px;
+}
+.letter{
+    max-width: 90px;
+    height: 100px;
+}
+td{
+    border: black solid 1px;
+}

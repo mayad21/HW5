@@ -5,38 +5,57 @@
     This website displays one line of the Scrabble Board to the user along with seven letter tiles on a tile rack. The user drags tiles to the board to make a word and their score is calculated. 
     Mustapha Ayad, UMass Lowell Computer Science, mustapha_ayad@student.uml.edu
     Copyright (c) 2021 by Mustapha. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. updated by MA on December 13th, 2021 at 9:32 PM -->
-    <html lang="en">
-      <head>
-          <!--Initial configuration-->
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>One Line of Scrabble</title>
-          <!--stylesheets-->
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-          <link rel="stylesheet" href="css/hw5.css">
-          
-          
-          <!-- https://jqueryui.com/droppable/ -->
-          <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-          <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-          <script type="text/javascript" src="js/hw5.js"></script>
-      </head>
-      <body>
-          <h1 class="text-center">One Line of Scrabble</h1>
-          <main>
-              <div id = "tiles">
-              </div>
-              <div id="draggable" class="ui-widget-content">
-                  <p>Drag me to my target</p>
-              </div>
-              <div id="droppable" class="ui-widget-header">
-                  <p>Drop here</p>
-              </div>
-          </main>
-          <footer class ="page-footer pt-4" id="main-footer">
-              <div class="footer-copyright text-center py-3">
-                  <p>Copyright &copy; 2021 Mustapha Ayad</p>
-              </div>
+<html lang="en">
+    <head>
+        <!--Initial configuration-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>One Line of Scrabble</title>
+        <!--stylesheets-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/hw5.css">
+        <!-- https://jqueryui.com/droppable/ -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/hw5.js"></script>
+    </head>
+    <body>
+        <div id="contentWrap">
+            <h1 class="text-center">One Line of Scrabble</h1>
+            <main>
+                <!-- Form with each button associated with a JS function-->
+                <form id = "controls">
+                    <button type="button" class="btn btn-primary" onclick="return nextWord()">next word</button>
+                    <button type="button" class="btn btn-primary" onclick="return restart()">restart</button>
+                </form>
+                <!-- Div where the board tiles are placed-->
+                <div id= "board">
+                    <table>
+                        <tr>
+                            <td><img id="tile1" class="tile" title = "blank" src="graphics_data/blankBoardTile.png"></td>
+                            <td><img id="tile2" class="tile" title = "doubleWord1" src="graphics_data/doubleWordScore.png"></td>
+                            <td><img id="tile3" class="tile" title = "blank" src="graphics_data/blankBoardTile.png"></td>
+                            <td><img id="tile4" class="tile" title = "blank" src="graphics_data/blankBoardTile.png"></td>
+                            <td><img id="tile5" class="tile" title = "blank" src="graphics_data/blankBoardTile.png"></td>
+                            <td><img id="tile6" class="tile" title = "doubleWord2" src="graphics_data/doubleWordScore.png"></td>
+                            <td><img id="tile7" class="tile" title = "blank" src="graphics_data/blankBoardTile.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- Display the word and total score-->
+                <div id="divScore"><span id="score">Word score: </span></div>
+                <div id="divTotalScore"><span id="totalScore">Total Score: </span></div>
+                <!-- https://stackoverflow.com/questions/432174/how-to-store-arbitrary-data-for-some-html-tags -->
+                <!-- Div where the letter tiles are placed, add a data letter tag to identify the letter-->
+                <div id="rack"><img data-letter='A' id="letter1" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_A.jpg"><img data-letter='B'id="letter2" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_B.jpg"><img data-letter='C' id="letter3" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_C.jpg"><img data-letter='D'id="letter4" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_D.jpg"><img data-letter='E'id="letter5" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_E.jpg"><img data-letter='F'id="letter6" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_F.jpg"><img data-letter='G'id="letter7" class="letter" src="graphics_data/Scrabble_Tiles/Scrabble_Tile_G.jpg">
+                </div>
+            </main>
+            <footer class ="page-footer pt-4" id="main-footer">
+                <div class="footer-copyright text-center py-3">
+                    <p>Copyright &copy; 2021 Mustapha Ayad</p>
+                </div>
             </footer>
-      </body>
-  </html>
+        </div>
+    </body>
+</html>
