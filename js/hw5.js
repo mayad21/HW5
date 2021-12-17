@@ -77,6 +77,7 @@ function nextWord() {
     }
     //reset the word score
     score = 0;
+    doubleWordFlag = 0;
     //update the word and total score on the website
     var fillTotalScore = "Total Score:" + totalScore;
     var total_score = document.getElementById('totalScore');
@@ -90,6 +91,7 @@ function restart() {
     //reset the word and total score on the website
     totalScore = 0;
     score = 0;
+    doubleWordFlag = 0;
     var total_score = document.getElementById('totalScore');
     var word_score = document.getElementById('score');
     word_score.innerHTML = "Word Score:";
